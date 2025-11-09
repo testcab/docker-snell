@@ -9,13 +9,35 @@ The docker image for [snell](https://kb.nssurge.com/surge-knowledge-base/release
 ### Run
 
 ```
-docker run --rm testcab/snell
+docker run \
+    -d \
+    --name=snell \
+    --restart=unless-stopped \
+    -e SNELL_PSK="SomeRandomPSK!!!" \
+    -p 6160:6160/tcp \
+    -p 6160:6160/udp \
+    testcab/snell
+```
+
+### Check logs
+
+```
+docker logs snell
 ```
 
 
 ### Supported tags and respective `Dockerfile` links
 
 * [`5.0.0`, `5.0`, `5.0`, `latest`](https://github.com/testcab/docker-snell/blob/master/Dockerfile)
+
+
+### Environment Variables
+
+Env        | Default | Description
+---------- | ------- | -----------
+SNELL_PORT | 6160    | Snell server listening port.
+SNELL_PSK  |         | Pre-Shared Key, if not provided, a random one will be generated.
+SNELL_IPV6 | false   | Enable IPv6?
 
 
 ## LICENSE
