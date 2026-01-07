@@ -1,6 +1,7 @@
 FROM alpine AS download
 
-RUN wget -O- https://dl.nssurge.com/snell/snell-server-v5.0.0-linux-amd64.zip \
+ARG SNELL_VERSION=5.0.1
+RUN wget -O- https://dl.nssurge.com/snell/snell-server-v${SNELL_VERSION}-linux-amd64.zip \
   | unzip - \
   && chmod +x snell-server
 
