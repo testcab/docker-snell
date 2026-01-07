@@ -1,7 +1,6 @@
 # testcab/snell
 
-[![docker build automated](https://img.shields.io/docker/cloud/automated/testcab/snell.svg)](https://hub.docker.com/r/testcab/snell "testcab/snell")
-[![](https://images.microbadger.com/badges/image/testcab/snell.svg)](https://microbadger.com/images/testcab/snell "testcab/snell")
+[![Docker Image Size](https://img.shields.io/docker/image-size/testcab/snell)](https://hub.docker.com/r/testcab/snell "testcab/snell")
 
 The docker image for [snell](https://kb.nssurge.com/surge-knowledge-base/release-notes/snell).
 
