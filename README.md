@@ -40,8 +40,11 @@ docker logs snell-server
 
 ### Supported tags and respective `Dockerfile` links
 
-* [`5.0.1`, `5.0`, `5.0`, `latest`](https://github.com/testcab/docker-snell-server/blob/main/Dockerfile)
+* [`5.0.1`, `5.0`, `5`, `latest`](https://github.com/testcab/docker-snell-server/blob/main/Dockerfile)
 * [`5.0.0`](https://github.com/testcab/docker-snell-server/blob/5.0.0/Dockerfile)
+* [`4.1.1`, `4.1`, `4`](https://github.com/testcab/docker-snell-server/blob/4.1.1/Dockerfile)
+* [`4.1.0`](https://github.com/testcab/docker-snell-server/blob/4.1.0/Dockerfile)
+* [`4.0.1`, `4.0`](https://github.com/testcab/docker-snell-server/blob/4.0.1/Dockerfile)
 
 
 ### Environment Variables
