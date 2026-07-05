@@ -16,4 +16,4 @@ cat <<-EOF > snell-server.conf
 	ipv6 = ${SNELL_IPV6:=false}
 EOF
 
-exec /snell-server
+exec /usr/local/bin/snell-server

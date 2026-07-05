@@ -18,4 +18,4 @@ EXPOSE 6160/udp
 
 ENTRYPOINT ["/entrypoint.sh"]
 COPY entrypoint.sh /entrypoint.sh
-COPY --from=download /snell-server /snell-server
+COPY --from=download /snell-server /usr/local/bin/snell-server
