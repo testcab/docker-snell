@@ -5,7 +5,7 @@ FROM alpine AS download-arm64
 ENV SNELL_ARCH=aarch64
 
 FROM download-${TARGETARCH} AS download
-ARG SNELL_VERSION=5.0.1
+ARG SNELL_VERSION=4.1.0
 RUN wget -O- https://dl.nssurge.com/snell/snell-server-v${SNELL_VERSION}-linux-${SNELL_ARCH}.zip \
   | unzip - \
   && chmod +x snell-server
