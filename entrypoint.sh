@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+if [ -f snell-server.conf ]; then
+	exec /usr/local/bin/snell-server
+fi
+
 if [ -z "${SNELL_PSK-}" ]; then
 	SNELL_PSK=$(head -c 15 /dev/urandom | base64)
 	echo "Using generated PSK: $SNELL_PSK"

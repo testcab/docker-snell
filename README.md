@@ -5,7 +5,7 @@
 The docker image for [snell](https://kb.nssurge.com/surge-knowledge-base/release-notes/snell).
 
 
-### Run
+### Run with Environment Variables
 
 ```
 docker run \
@@ -13,6 +13,19 @@ docker run \
     --name=snell \
     --restart=unless-stopped \
     -e SNELL_PSK="SomeRandomPSK!!!" \
+    -p 6160:6160/tcp \
+    -p 6160:6160/udp \
+    testcab/snell
+```
+
+### Run with config file
+
+```
+docker run \
+    -d \
+    --name=snell \
+    --restart=unless-stopped \
+    -v $PWD/snell-server.conf:/snell-server.conf \
     -p 6160:6160/tcp \
     -p 6160:6160/udp \
     testcab/snell
@@ -32,6 +45,8 @@ docker logs snell
 
 
 ### Environment Variables
+
+The following variables are used if no `snell-server.conf` are mounted in to the container at its working directory (`/` by default).
 
 Env        | Default | Description
 ---------- | ------- | -----------
